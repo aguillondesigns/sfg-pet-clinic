@@ -1,6 +1,7 @@
 package guru.springframework.petclinic.model;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -8,6 +9,11 @@ import java.util.Set;
 
 @Entity
 @Table(name = "pets")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Pet extends BaseEntity {
     @Column(name = "name")
     private String name;
